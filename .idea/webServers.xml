@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a05976f1-1b1e-4fa3-be52-d84fcc4ac803" name="albertbrauer.rashidbairamov.de" url="http://w01bd6fb.kasserver.com">
+        <fileTransfer host="w01bd6fb.kasserver.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

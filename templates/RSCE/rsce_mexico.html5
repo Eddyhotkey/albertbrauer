@@ -1,0 +1,43 @@
+<div class="rsce_mexico <?= $this->class ?>" <?= $this->cssID ?>>
+    <div class="container">
+        <div class="row">
+            <div class="col-24 col-md-12 order-2 order-md-1">
+                <div class="rsce_mexico__list_container">
+                    <ul class="rsce_mexico__list">
+                        <?php foreach ( $this->list as $item): ?>
+                            <li class="rsce_mexico__item">
+                                <?php if ( $item->quantity ): ?>
+                                    <p class="rsce_mexico__item_quantity">
+                                        <?= $item->quantity ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ( $item->title ): ?>
+                                    <p class="rsce_mexico__item_title">
+                                        <?= $item->title ?>
+                                    </p>
+                                <?php endif; ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-24 col-md-12 order-1 order-md-2">
+                <?php if( $this->headline ): ?>
+                    <<?php echo $this->hl ?> itemprop="title" class="rsce_mexico__title">
+                        <?php echo $this->headline ?>
+                    </<?php echo $this->hl ?>>
+                <?php endif; ?>
+                <?php if ( $this->text ): ?>
+                    <div class="rsce_mexico__text">
+                        <?= $this->text ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ($image = $this->getImageObject($this->image, [null, null, 2])): ?>
+                    <?php $this->insert('image', (array) $image); ?>
+                    <?php $image->picture['alt'] = $this->image_alt ?>
+                    <?php $image->picture['title'] = $this->image_title ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>

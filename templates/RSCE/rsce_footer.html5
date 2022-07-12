@@ -1,0 +1,48 @@
+<div class="rsce_footer <?= $this->class ?>" <?= $this->cssID ?>>
+    <div class="container">
+        <div class="row">
+            <div class="col-24 col-lg-12">
+                <?php if ($image = $this->getImageObject($this->image, [null, null, 10])): ?>
+                    <div class="rsce_footer__logo_container">
+                        <?php $image->picture['alt'] = $this->image_alt ?>
+                        <?php $image->picture['title'] = $this->image_title ?>
+                        <?php $image->picture['class'] = 'rsce_footer_logo' ?>
+                        <?php $this->insert('image', (array) $image); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <div class="col-24 col-lg-12 d-flex flex-column justify-content-end">
+                <div class="rsce_footer__slm">
+                    <?php foreach ( $this-> slm_list as $slm_item ): ?>
+                        <a href="<?= $slm_item->slm_link ?>"
+                           class="rsce_footer__slm_link"
+                           title="<?= $slm_item->slm_link_title ?>"
+                           aria-label="<?= $slm_item->slm_link_title ?>"
+                        >
+                            <?php if ($image = $this->arrData['getImageObject']($slm_item -> slm_image, [null, null, 5] )): ?>
+                                <div class="rsce_footer__slm_icon">
+                                    <?php $image->picture['alt'] = $slm_item->slm_image_alt ?>
+                                    <?php $image->picture['title'] = $slm_item->slm_image_title ?>
+                                    <?php $this->insert('image', (array) $image); ?>
+                                </div>
+                            <?php endif; ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+                <ul class="rsce_footer__navigation">
+                    <?php foreach ( $this->navigation_list as $navigation_item ): ?>
+                       <li class="rsce_footer__navigation_item">
+                           <a href="<?= $navigation_item->navigation_link ?>"
+                              class="rsce_footer__navigation_link"
+                              title="<?= $navigation_item->navigation_link_title ?>"
+                              aria-label="<?= $navigation_item->navigation_link_title ?>"
+                           >
+                                <?= $navigation_item->navigation_link_text ?>
+                           </a>
+                       </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

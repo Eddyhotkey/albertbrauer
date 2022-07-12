@@ -1,0 +1,42 @@
+.rsce_footer {
+  padding-top: rem-calc( 50px );
+  padding-bottom: rem-calc( 50px );
+  background-color: $tbilisi;
+  @include media-breakpoint-up( gl ) {
+	padding-top: rem-calc( 100px );
+	padding-bottom: rem-calc( 100px );
+  }
+
+  &__slm {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: rem-calc(15px);
+	&_link {
+	  margin-right: rem-calc(15px);
+	  &:last-child {
+		margin-right: 0;
+	  }
+	}
+  }
+
+  &__navigation {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&_item {
+	  margin-right: rem-calc(20px);
+	  &:last-child {
+		margin-right: 0;
+	  }
+	}
+	&_link {
+	  text-decoration: none;
+	  color: #ffffff;
+	  font-weight: 300;
+	}
+  }
+}

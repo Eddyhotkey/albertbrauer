@@ -1,0 +1,17 @@
+.mm-panel, .mm-navbar {
+  background-color: $luxemburg;
+}
+
+.mm-navbar__title {
+  text-transform: uppercase;
+}
+
+li.mm-listitem {
+  text-transform: uppercase;
+  a {
+    text-transform: uppercase;
+  }
+  &::after{
+    content: none;
+  }
+}

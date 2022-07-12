@@ -1,0 +1,16 @@
+.rsce_kabul {
+
+  .image_container {
+	margin-bottom: rem-calc(5px);
+  }
+
+  &__title {
+	margin-bottom: rem-calc(5px);
+	font-weight: 400;
+	font-size: rem-calc(18px);
+	color: $tbilisi;
+  }
+  &__text {
+	font-size: rem-calc(16px);
+  }
+}

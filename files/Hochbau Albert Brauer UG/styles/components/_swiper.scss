@@ -1,0 +1,17 @@
+.swiper-scrollbar-drag {
+  top: -2px;
+  width: rem-calc(100px) !important;
+  background: $luxemburg;
+  border-radius: 0;
+  height: 9px;
+
+  @include media-breakpoint-up(lg) {
+	width: rem-calc(200px) !important;
+  }
+
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+  left: 10%;
+  width: 80%;
+}

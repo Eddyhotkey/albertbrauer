@@ -1,0 +1,83 @@
+.rsce_sofia {
+  @include border_top;
+
+  &__col {
+	&:first-child {
+	  @include media-breakpoint-up(md) {
+		padding-left: 0;
+	  }
+	}
+	&:last-child {
+	  @include media-breakpoint-up(md) {
+		padding-right: 0;
+	  }
+	}
+  }
+
+  // TITLE
+  &__title {
+	@include title_main;
+	padding-top: rem-calc(50px);
+	@include media-breakpoint-up(lg) {
+	  margin-bottom: rem-calc(50px);
+	}
+  }
+
+  // FORM
+  .ce_form {
+	@include media-breakpoint-down(lg) {
+	  margin-bottom: rem-calc(30px);
+	}
+	div.rsce_sofia__form_input {
+	  margin-bottom: rem-calc(35px);
+	  input {
+		width: 100%;
+		margin-bottom: rem-calc(20px);
+		padding-bottom: rem-calc(3px);
+		border: none;
+		border-bottom: 2px solid $berlin;
+		box-shadow: none;
+		@include media-breakpoint-up(md) {
+		  width: rem-calc(360px);
+		}
+	  }
+	}
+	div.rsce_sofia__form_explanation {
+	  margin-bottom: rem-calc(30px);
+	  p {
+		margin-bottom: 0;
+		font-size: rem-calc(14px);
+		a {
+		  text-decoration: none;
+		  color: $luxemburg;
+		  transition-duration: .3s;
+		  &:hover {
+			color: $luxemburg_transparent;
+			transition-duration: .3s;
+		  }
+		}
+	  }
+	}
+
+	//BUTTON
+	button.rsce_sofia__form_button {
+	  padding: rem-calc(5px) rem-calc(50px);
+	  background: none;
+	  border: 1px solid $baku;
+	  transition-duration: .3s;
+	  &:hover {
+		border-color: $luxemburg;
+		color: $luxemburg;
+		transition-duration: .3s;
+	  }
+	}
+  }
+
+  // GOOGLE MAP
+  .mod_dlh_googlemaps {
+	height: 100%;
+  }
+  .dlh_googlemap {
+	padding-bottom: 100% !important;
+  }
+}

@@ -1,0 +1,25 @@
+.rsce_tiflis {
+  @include border_bottom;
+
+  margin-bottom: rem-calc(50px);
+  .container {
+	padding-top: rem-calc(15px);
+	padding-bottom: rem-calc(15px);
+	@include media-breakpoint-up(lg) {
+	  padding-top: rem-calc(35px);
+	  padding-bottom: rem-calc(35px);
+	  @include border_right;
+	  @include border_left;
+	}
+  }
+  &__title {
+	margin-bottom: 0;
+	font-family: "Roboto Slab", serif;
+	font-size: rem-calc(38px);
+	font-weight: 400;
+	text-transform: uppercase;
+	@include media-breakpoint-up( lg ) {
+	  font-size: rem-calc(48px);
+	}
+  }
+}

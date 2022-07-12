@@ -1,0 +1,84 @@
+<div class="rsce_luxemburg <?= $this->class ?>" <?= $this->cssID ?>>
+    <div class="container">
+        <div class="row">
+            <div class="col-24 col-md-12 rsce_luxemburg__col">
+                <div class="rsce_luxemburg__item">
+                    <?php if ( $this-> link_col_1 ): ?>
+                        <a href="<?= $this->link_col_1 ?>"
+                           title="<?= $this->link_col_1_title ?>"
+                           aria-label="<?= $this->link_col_1_title ?>"
+                           class="rsce_luxemburg__link"
+                        >
+                            <div class="rsce_luxemburg__desc_container">
+                                <?php if ($image_col_1 = $this->getImageObject($this->image_col_1, [null, null, 1])): ?>
+                                    <?php $this->insert('image', (array) $image_col_1); ?>
+                                    <?php $image_col_1->picture['alt'] = $this->col_1_image_alt ?>
+                                    <?php $image_col_1->picture['title'] = $this->col_1_image_title ?>
+                                <?php endif; ?>
+                                <?php if ( $this->text_col_1 ): ?>
+                                    <div class="rsce_luxemburg__text_container">
+                                        <div class="rsce_luxemburg__text">
+                                            <?= $this->text_col_1 ?>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <?php if ( $this->title_col_1 ): ?>
+                                <h2 class="rsce_luxemburg__title">
+                                    <?= $this->title_col_1 ?>
+                                </h2>
+                            <?php endif; ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="col-24 col-md-12 rsce_luxemburg__col">
+                <div class="rsce_luxemburg__item">
+                    <?php if ( $this-> link_col_2 ): ?>
+                        <a href="<?= $this->link_col_2 ?>"
+                           title="<?= $this->link_col_2_title ?>"
+                           aria-label="<?= $this->link_col_2_title ?>"
+                           class="rsce_luxemburg__link"
+                        >
+                            <div class="rsce_luxemburg__desc_container">
+                                <?php if ($image_col_2 = $this->getImageObject($this->image_col_2, [null, null, 1])): ?>
+                                    <?php $this->insert('image', (array) $image_col_2); ?>
+                                    <?php $image_col_2->picture['alt'] = $this->col_2_image_alt ?>
+                                    <?php $image_col_2->picture['title'] = $this->col_2_image_title ?>
+                                <?php endif; ?>
+                                <?php if ( $this->text_col_2 ): ?>
+                                    <div class="rsce_luxemburg__text_container">
+                                        <div class="rsce_luxemburg__text">
+                                            <?= $this->text_col_2 ?>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <?php if ( $this->title_col_2 ): ?>
+                                <h2 class="rsce_luxemburg__title">
+                                    <?= $this->title_col_2 ?>
+                                </h2>
+                            <?php endif; ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <div class="arrow-down">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <?php if ( $this->link ): ?>
+        <div class="rsce_luxemburg__link_container">
+            <a href="<?= $this->link ?>"
+               title="<?= $this->link_title ?>"
+               aria-label="<?= $this->link_title ?>"
+               class="rsce_luxemburg__button"
+            >
+                <?= $this->link_text ?>
+            </a>
+        </div>
+    <?php endif; ?>
+</div>

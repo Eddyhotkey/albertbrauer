@@ -1,0 +1,37 @@
+.rsce_berlin {
+  .container {
+	@include border_right;
+	@include border_left;
+	@include border-bottom;
+	padding-top: rem-calc(30px);
+	padding-bottom: rem-calc(30px);
+	@include media-breakpoint-up(lg) {
+	  padding-top: rem-calc(50px);
+	  padding-bottom: rem-calc(50px);
+	}
+  }
+
+  &__title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: "Roboto Slab", serif;
+	span:first-child {
+	  font-size: rem-calc(38px);
+	  font-weight: 400;
+	  @include media-breakpoint-up(lg) {
+		font-size: rem-calc(60px);
+	  }
+	}
+	span:last-child {
+	  font-size: rem-calc(16px);
+	  font-weight: 300;
+	  text-transform: uppercase;
+	  color: $tbilisi;
+	  @include media-breakpoint-up(lg) {
+		font-size: rem-calc(20px);
+	  }
+	}
+  }
+}

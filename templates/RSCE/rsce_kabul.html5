@@ -1,0 +1,19 @@
+<div class="rsce_kabul <?= $this->class ?>" <?= $this->cssID ?>>
+    <div class="rsce_kabul__item h-100">
+        <?php if ($image = $this->getImageObject($this->image, [null, null, 3])): ?>
+            <?php $this->insert('image', (array) $image); ?>
+            <?php $image->picture['alt'] = $this->image_alt ?>
+            <?php $image->picture['title'] = $this->image_title ?>
+        <?php endif; ?>
+        <?php if( $this->headline ): ?>
+            <<?php echo $this->hl ?> itemprop="title" class="rsce_kabul__title">
+                <?php echo $this->headline ?>
+            </<?php echo $this->hl ?>>
+        <?php endif; ?>
+        <?php if ( $this->text ): ?>
+            <p class="rsce_kabul__text">
+                <?= $this->text ?>
+            </p>
+        <?php endif; ?>
+    </div>
+</div>

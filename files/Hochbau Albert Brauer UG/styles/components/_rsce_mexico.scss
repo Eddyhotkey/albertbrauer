@@ -1,0 +1,70 @@
+.rsce_mexico {
+  @include padding_top_main;
+  @include padding_bottom_main;
+  @include border_bottom;
+
+  margin-bottom: rem-calc(30px);
+
+  @include media-breakpoint-down(lg) {
+	border-bottom: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+	margin-bottom: rem-calc(50px);
+  }
+
+  &__title {
+	@include title_main;
+  }
+
+  &__text {
+	margin-bottom: rem-calc(20px);
+	@include media-breakpoint-up(lg) {
+	  margin-bottom: rem-calc(30px);
+	}
+  }
+
+  &__list_container {
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+  }
+
+  &__list {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+
+  &__item {
+	margin-bottom: rem-calc(20px);
+	padding-bottom: rem-calc(20px);
+	border-bottom: 1px solid $tbilisi;
+
+	@include media-breakpoint-up(lg) {
+	  margin-bottom: rem-calc(30px);
+	  padding-bottom: rem-calc(30px);
+	}
+
+	&:last-child {
+	  @include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+	  }
+	}
+
+	&_quantity {
+	  margin-bottom:0;
+	  font-size: rem-calc(50px);
+	  color: $luxemburg;
+	  @include media-breakpoint-up(lg) {
+		font-size: rem-calc(60px);
+	  }
+	}
+
+	&_title {
+	  margin: 0;
+	  font-weight: 300;
+	}
+  }
+}
