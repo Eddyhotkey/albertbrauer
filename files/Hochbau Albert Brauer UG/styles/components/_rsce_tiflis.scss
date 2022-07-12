@@ -1,7 +1,5 @@
 .rsce_tiflis {
   @include border_bottom;
-
-  margin-bottom: rem-calc(50px);
   .container {
 	padding-top: rem-calc(15px);
 	padding-bottom: rem-calc(15px);
