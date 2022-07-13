@@ -12279,15 +12279,9 @@ li.mm-listitem::after {
 .rsce_sofia {
   border-top: 0.125rem solid #EBEBEB;
 }
-@media (min-width: 768px) {
-  .rsce_sofia__col:first-child {
-    padding-left: 0;
-  }
-}
-@media (min-width: 768px) {
-  .rsce_sofia__col:last-child {
-    padding-right: 0;
-  }
+.rsce_sofia .container {
+  border-right: 0.125rem solid #EBEBEB;
+  border-left: 0.125rem solid #EBEBEB;
 }
 .rsce_sofia__title {
   margin-bottom: 1.25rem;
@@ -12307,10 +12301,8 @@ li.mm-listitem::after {
     margin-bottom: 3.125rem;
   }
 }
-@media (max-width: 991.98px) {
-  .rsce_sofia .ce_form {
-    margin-bottom: 1.875rem;
-  }
+.rsce_sofia .ce_form {
+  padding-bottom: 3.125rem;
 }
 .rsce_sofia .ce_form div.rsce_sofia__form_input {
   margin-bottom: 2.1875rem;
@@ -12322,11 +12314,6 @@ li.mm-listitem::after {
   border: none;
   border-bottom: 2px solid #EBEBEB;
   box-shadow: none;
-}
-@media (min-width: 768px) {
-  .rsce_sofia .ce_form div.rsce_sofia__form_input input {
-    width: 22.5rem;
-  }
 }
 .rsce_sofia .ce_form div.rsce_sofia__form_explanation {
   margin-bottom: 1.875rem;
@@ -12357,6 +12344,19 @@ li.mm-listitem::after {
 }
 .rsce_sofia .mod_dlh_googlemaps {
   height: 100%;
+}
+@media (max-width: 991.98px) {
+  .rsce_sofia .mod_dlh_googlemaps {
+    margin-bottom: 3.125rem;
+  }
+}
+@media (min-width: 992px) {
+  .rsce_sofia .mod_dlh_googlemaps {
+    padding: 3.125rem 0;
+  }
+  .rsce_sofia .mod_dlh_googlemaps .dlh_googlemap {
+    height: 100% !important;
+  }
 }
 .rsce_sofia .dlh_googlemap {
   padding-bottom: 100% !important;

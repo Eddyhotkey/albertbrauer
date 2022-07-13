@@ -1,5 +1,5 @@
 <section class="rsce_sofia">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="rsce_sofia__col col-24 col-lg-12 order-2 order-lg-1">
                 <?php if ( $this->module ): ?>
