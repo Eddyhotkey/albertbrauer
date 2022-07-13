@@ -1,4 +1,14 @@
 .layout_latest {
+  @include media-breakpoint-up( lg ) {
+	padding: 0 rem-calc( 20px );
+  }
+
+  .image_container {
+	@include media-breakpoint-down( lg ) {
+	  margin-bottom: rem-calc( 20px );
+	}
+  }
+
   &__container {
 	display: flex;
 	flex-direction: column;
@@ -8,5 +18,32 @@
 	  align-items: center;
 	  padding: rem-calc(20px) 0;
 	}
+  }
+  &__text_container {
+	h2 {
+	  font-size: rem-calc( 18px );
+	  font-weight: 400;
+	  text-transform: uppercase;
+	  a {
+		color: inherit;
+		text-decoration: none;
+		transition-duration: .3s;
+		&:hover {
+		  color: $luxemburg;
+		  transition-duration: .3s;
+		}
+	  }
+	}
+	.ce_text {
+	  p {
+		font-size: rem-calc( 16px );
+		color: $tbilisi;
+	  }
+	}
+  }
+  .more a {
+	@include button_main;
+	padding-left: rem-calc( 20px );
+	padding-right: rem-calc( 20px );
   }
 }
