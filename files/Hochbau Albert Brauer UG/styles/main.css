@@ -12444,4 +12444,37 @@ li.mm-listitem::after {
   }
 }
 
+.mod_newslist {
+  border-bottom: 0.125rem solid #EBEBEB;
+  margin-bottom: 6.25rem;
+}
+@media (min-width: 992px) {
+  .mod_newslist {
+    margin-bottom: 12.5rem;
+  }
+}
+.mod_newslist .container {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+@media (min-width: 992px) {
+  .mod_newslist .container {
+    border-left: 0.125rem solid #EBEBEB;
+    border-right: 0.125rem solid #EBEBEB;
+  }
+}
+
+.layout_latest__container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .layout_latest__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,12 @@
+.layout_latest {
+  &__container {
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-up( md ) {
+	  flex-direction: row;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: rem-calc(20px) 0;
+	}
+  }
+}

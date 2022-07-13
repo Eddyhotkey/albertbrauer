@@ -8,17 +8,17 @@
         <?php if ($this->addImage): ?>
             <?php $this->insert('image', $this->arrData); ?>
         <?php endif; ?>
-
-        <h2><?= $this->linkHeadline ?></h2>
-
-        <div class="ce_text block">
-            <?= $this->teaser ?>
+        <div class="layout_latest__container">
+            <div class="layout_latest__text_container">
+                <h2><?= $this->linkHeadline ?></h2>
+                <div class="ce_text block">
+                    <?= $this->teaser ?>
+                </div>
+            </div>
+            <?php if ($this->hasText || $this->hasTeaser): ?>
+                <p class="more"><?= $this->more ?></p>
+            <?php endif; ?>
         </div>
-
-        <?php if ($this->hasText || $this->hasTeaser): ?>
-            <p class="more"><?= $this->more ?></p>
-        <?php endif; ?>
-
     </div>
 </div>
 <?php
