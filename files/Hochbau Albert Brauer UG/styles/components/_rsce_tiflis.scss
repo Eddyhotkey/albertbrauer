@@ -1,14 +1,7 @@
 .rsce_tiflis {
   @include border_bottom;
   .container {
-	padding-top: rem-calc(15px);
-	padding-bottom: rem-calc(15px);
-	@include media-breakpoint-up(lg) {
-	  padding-top: rem-calc(35px);
-	  padding-bottom: rem-calc(35px);
-	  @include border_right;
-	  @include border_left;
-	}
+	@include main_container;
   }
   &__title {
 	margin-bottom: 0;

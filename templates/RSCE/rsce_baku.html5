@@ -1,0 +1,42 @@
+<div class="rsce_baku">
+    <div class="container">
+        <div class="row">
+            <div class="col-24 col-lg-12">
+                <?php if ($image = $this->getImageObject($this->image, [null, null, 3])): ?>
+                    <?php $this->insert('image', (array) $image); ?>
+                    <?php $image->picture['alt'] = $this->image_alt ?>
+                    <?php $image->picture['title'] = $this->image_title ?>
+                <?php endif; ?>
+            </div>
+            <div class="col-24 col-lg-12">
+                <?php if( $this->headline ): ?>
+                    <<?php echo $this->hl ?> itemprop="title" class="rsce_baku__title">
+                        <?php echo $this->headline ?>
+                    </<?php echo $this->hl ?>>
+                <?php endif; ?>
+                <?php if ( $this->text ): ?>
+                    <div class="rsce_baku__text">
+                        <?= $this->text ?>
+                    </div>
+                <?php endif; ?>
+                <ul class="rsce_baku__list">
+                    <?php foreach ( $this->list as $item): ?>
+                        <li class="rsce_baku__item">
+                            <?php if ( $item->quantity ): ?>
+                                <span class="rsce_baku__quantity">
+                                    <?= $item->quantity ?>
+                                </span>
+                            <?php endif; ?>
+                            <?php if ( $item->quantity ): ?>
+                                <span class="rsce_baku__item_title">
+                                    <?= $item->title ?>
+                                </span>
+                            <?php endif; ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+
+</div>
+</div>
