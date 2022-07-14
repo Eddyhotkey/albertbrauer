@@ -1,0 +1,29 @@
+.rsce_baku {
+  .container {
+	@include main_container;
+  }
+  &__title {
+	@include main_subtitle;
+	margin-bottom: rem-calc( 20px );
+  }
+
+  &__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  &__item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: rem-calc( 10px );
+  }
+  &__quantity {
+	font-size: rem-calc( 16px );
+	font-weight: 500;
+	color: $luxemburg;
+  }
+  &__item_title {
+	font-size: rem-calc( 14px );
+	font-weight: 300;
+  }
+}
